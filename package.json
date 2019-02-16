@@ -1,7 +1,7 @@
 {
   "name": "tellodrone",
-  "version": "1.0.0",
-  "description": "Yet another TelloDrone SDK wrapper",
+  "version": "1.0.0-beta.1",
+  "description": "A Ryze Tello SDK wrapper for NodeJS",
   "keywords": [
     "tello",
     "drone",
@@ -15,6 +15,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Elia Biraschi <elia.birasachi@gmail.com>",
+  "homepage": "https://github.com/eliabiraschi/TelloDrone",
+  "bugs": {
+    "url": "https://github.com/eliabiraschi/TelloDrone/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliabiraschi/TelloDrone.git"
+  },
+  "engines" : {
+    "node" : ">=7.10"
+  },
   "license": "MIT",
   "dependencies": {
     "dgram": "^1.0.1",
