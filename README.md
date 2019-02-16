@@ -2,14 +2,14 @@
 A NodeJS wrapper for the Ryze Tello SDK 1.3.
 
 ## Motivation
-I did not find a library I liked so I made mine.
+I did not find a library I liked, so I made mine.
 
 ## Features
-* Easy set up and minimal boilerplate
-* All the SDK commands are available and return a promise
-* Telemetry is broadcasted as a stringified object
-* Video buffer is broadcasted too and ready for use
-* Built in method for taking pictures (experimental)
+* Easy set up and minimal boilerplate.
+* All the SDK commands are available and return a promise.
+* Telemetry is broadcasted as a stringified object.
+* Video buffer is broadcasted too and ready to use.
+* Built in method for taking pictures (experimental).
 
 ## Installation and basic use
 Install with `npm`:
@@ -83,7 +83,7 @@ Don't forget to connect to the Tello WiFi before running any related script.
 ## The TelloDrone class
 The TelloDrone class constructor accepts 3 arguments, all of them are optionals.
 1. A string used as id to idetify the class itself;
-2. An object fir specifing non default values to connect to the aircraft. A partial object is ok too and the missing values will be filled by the defaults.
+2. An object for specifing non default values to connect to the aircraft. A partial object is ok too and the missing values will be filled by the defaults.
 ```javascript
 {
   AIRCRAFT_PORT: 8889,
@@ -95,11 +95,11 @@ The TelloDrone class constructor accepts 3 arguments, all of them are optionals.
 3. An array of objects describing the methods names and the commands to send to the aircraft. Please check the source code if you're interested in working with this.
 
 ## List of the public methods
-The public methods reflect the commands you can send to the aircraft. I've only changed a couple of them for clarity. The returned values and/or arguments are those described in the official SDK documentation. Each one of them returns a promise.
+The public methods reflect the commands you can send to the aircraft. I've only changed a couple of them for clarity. The returned values and/or arguments are those described in [the official SDK documentation](https://terra-1-g.djicdn.com/2d4dce68897a46b19fc717f3576b7c6a/Tello%20%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/For%20Tello/Tello%20SDK%20Documentation%20EN_1.3_1122.pdf). Each one of them returns a promise.
 The promises both resolve and reject with an object: `resolve({ message })` or `reject({ error: message || error })`.
 
 * `start()` puts the aircraft in SDK mode, it has to be called prior to any other command
-* `panic()` stops all the rotors
+* `panic()` stops all the rotors (*emergency* command)
 * `getHeight()`
 * `getBattery()`
 * `getTime()`
@@ -126,6 +126,8 @@ The promises both resolve and reject with an object: `resolve({ message })` or `
 * `flyTo(valueX, valueY, valueZ, speed)` the actual command sent is `go valueX valueY valueZ speed`
 * `curve(valueX, valueY, valueZ, valueX2, valueY2, valueZ2, speed)`
 * `fourChannel(chA, chB, chC, chD)` the actual command sent is `rc chA chB chC chD`
+
+*NOTE*: the command for setting the WiFi is intentionally missing.
 
 In addition there are 3 more commands that are different for some reasons:
 * `streamOn()` it starts the stream video and set up a ticker to keep the video alive
