@@ -1,4 +1,4 @@
-# TelloDrone
+# TelloDrone (Yet Another Tello SDK Wrapper)
 A NodeJS wrapper for the Ryze Tello SDK 1.3.
 
 ## Motivation
