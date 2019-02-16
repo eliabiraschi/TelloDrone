@@ -1,0 +1,23 @@
+{
+  "name": "tellodrone",
+  "version": "1.0.0",
+  "description": "Yet another TelloDrone SDK wrapper",
+  "keywords": [
+    "tello",
+    "drone",
+    "ryze",
+    "dji",
+    "sdk",
+    "async"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elia Biraschi <elia.birasachi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dgram": "^1.0.1",
+    "eventemitter3": "^3.1.0"
+  }
+}

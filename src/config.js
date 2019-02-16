@@ -1,0 +1,6 @@
+module.exports = {
+  AIRCRAFT_PORT: 8889,
+  STATUS_PORT: 8890,
+  VIDEO_PORT: 11111,
+  HOST: '192.168.10.1',
+}
