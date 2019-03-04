@@ -28,7 +28,7 @@ Fly:
 
 ```javascript
 Tello.start()
-Tello.takeoff()
+Tello.takeOff()
 Tello.forward(100)
 Tello.yawCW(360)
 Tello.land()
@@ -37,7 +37,7 @@ Fly better:
 ```javascript
 async function roll() {
   Tello.start()
-  Tello.takeoff()
+  Tello.takeOff()
   Tello.forward(100)
   const height = await Tello.getHeight()
   console.log(height)
@@ -51,7 +51,7 @@ roll()
 ```
 
 ## Events
-You can listen to the messages from the aircraft throught the `MESSAGE` event:
+You can listen to the messages from the aircraft through the `MESSAGE` event:
 ```javascript
 Tello.on(Tello.events.MESSAGE, data => {
 	console.log(data)
@@ -82,8 +82,8 @@ Don't forget to connect to the Tello WiFi before running any related script.
 
 ## The TelloDrone class
 The TelloDrone class constructor accepts 3 arguments, all of them are optionals.
-1. A string used as id to idetify the class itself;
-2. An object for specifing non default values to connect to the aircraft. A partial object is ok too and the missing values will be filled by the defaults.
+1. A string used as id to identify the class itself;
+2. An object for specifying non default values to connect to the aircraft. A partial object is ok too and the missing values will be filled by the defaults.
 ```javascript
 {
   AIRCRAFT_PORT: 8889,
